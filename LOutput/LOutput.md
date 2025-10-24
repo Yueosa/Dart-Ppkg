@@ -8,15 +8,30 @@
 
 ## 参数说明
 
-#### 基础参数
+#### 消息参数(共五个)
 
--   `first` 到 `fifth`: 可选的输出内容参数（最多 5 个）
+-   `message` - 主要消息内容（必需）
 
--   `level`: 调用栈层级深度（默认 1 层）
+-   `second` - 第二个消息片段（可选）
 
--   `mode`: 输出模式枚举
+-   `third` - 第三个消息片段（可选）
 
-#### 输出模式(OutputMode)
+-   `fourth` - 第四个消息片段（可选）
+
+-   `fifth` - 第五个消息片段（可选）
+
+#### 调试参数
+
+-   **`level`** - **调用栈层级**
+    -   **类型**: `int`
+    -   **默认值**: `1`
+    -   **说明**: 显示多少层函数调用关系
+
+-   **`mode`**: 输出模式
+    -   **类型**: `OutputMode` 枚举
+    -   **默认值**: `OutputMode.full`
+
+#### 输出模式(`OutputMode`)
 
 -   `OutputMode.plain`: 仅输出原始文本
 
@@ -56,7 +71,7 @@
 import 'LOutput.dart';
 
 void main() {
-  LOutput('Hello World'); // 默认全显示模式
+  LOutput('Hello World');
 
   LOutput('Error occurred', level: 2, mode: OutputMode.chainOnly);
 
