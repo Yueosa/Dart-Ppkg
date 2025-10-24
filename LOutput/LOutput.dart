@@ -5,17 +5,17 @@ enum OutputMode {
   full, // 全显示模式
 }
 
-void LOutput([
-  Object? first = '',
-  Object? second = '',
-  Object? third = '',
-  Object? fourth = '',
-  Object? fifth = '',
-  int level = 1, // 调用层级
+void LOutput(
+  Object? message, {
+  Object? second,
+  Object? third,
+  Object? fourth,
+  Object? fifth,
+  int level = 1,
   OutputMode mode = OutputMode.full,
-]) {
+}) {
   final args = [
-    first,
+    message,
     second,
     third,
     fourth,
