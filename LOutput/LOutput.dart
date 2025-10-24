@@ -11,7 +11,7 @@ void LOutput([
   Object? third = '',
   Object? fourth = '',
   Object? fifth = '',
-  int level = 3, // 调用层级
+  int level = 1, // 调用层级
   OutputMode mode = OutputMode.full,
 ]) {
   final args = [
